@@ -29,31 +29,20 @@
   color: #fff;
 }
 
-.header-filter {
-  position: relative;
-  display: inline-block;
-}
+
 
 .filter-options {
   display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: white;
   border: 1px solid #ccc;
   padding: 10px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  z-index: 1;
-  min-width: 150px;
+  margin-top: 5px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0px 10px 40px -7px rgba(55, 63, 104, 0.35);
+  width: 100%; 
 }
 
-.header-filter:hover .filter-options {
-  display: block;
-}
 
-.filter-text {
-  cursor: pointer;
-}
 
 .header-filter {
   display: flex;
@@ -64,15 +53,6 @@
 
 }
 
-.filter-options {
-  display: none;
-  border: 1px solid #ccc;
-  padding: 10px;
-  margin-top: 5px;
-  border-radius: 10px;
-  background: rgba(255, 255, 255, 1);
-  box-shadow: 0px 10px 40px -7px rgba(55, 63, 104, 0.35);
-}
 
 .header-filter:hover .filter-options,
 .filter-options:hover {
@@ -87,10 +67,6 @@
   line-height: 23px;
 }
 
-
-.filter-options {
-  width: 100%; 
-}
 
 .filter-option {
   cursor: pointer;

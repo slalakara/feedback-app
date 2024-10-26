@@ -5,30 +5,24 @@ import FeedbackHeader from "@/components/FeedbackHeader/feedbackHeader";
 import HeaderFilter from "@/components/FeedbackHeader/headerFilter";
 import NewPage from "@/components/new/page";
 import "./sude.css";
-import Edit from "@/components/svgs/edit";
-import EditModal from "@/components/EditFeedbackComp/page";
 
 export default function Deneme() {
-  const [showNewPage, setShowNewPage] = useState(false); 
+  const [showModal, setShowModal] = useState(false);
 
-  const handleAddFeedbackClick = () => {
-    setShowNewPage(true); 
-  };
-
-  const handleCancelClick = () => {
-    setShowNewPage(false); 
-  };
+  const handleOpenModal = () => setShowModal(true);
+  const handleCloseModal = () => setShowModal(false);
 
   return (
     <>
       <div className="deniyorum">
         <FeedbackHeader />
         <HeaderFilter />
-        <AddFeedbackBtn onAddFeedbackClick={handleAddFeedbackClick} />
+        <AddFeedbackBtn onClick={handleOpenModal} /> 
       </div>
-      
-   
-      {showNewPage && <NewPage onCancel={handleCancelClick} />}
+
+      {showModal && (
+        <NewPage onCancel={handleCloseModal} /> 
+      )}
     </>
   );
 }

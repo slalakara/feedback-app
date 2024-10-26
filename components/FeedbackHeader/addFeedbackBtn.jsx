@@ -1,9 +1,9 @@
 import "./feedbackHeader.css";
 
-export default function AddFeedbackBtn({ onAddFeedbackClick }) {
+export default function AddFeedbackBtn({ onClick }) {
   return (
     <div className="addfeedback">
-      <button onClick={onAddFeedbackClick}>+ Add Feedback</button>
+      <button onClick={onClick}>+ Add Feedback</button>
     </div>
   );
 }

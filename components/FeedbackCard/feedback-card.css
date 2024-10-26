@@ -1,0 +1,140 @@
+.card-items {
+  margin: 0 auto;
+  padding: 24px;
+  color: #FFFFFF;
+  border-radius: 10px;
+  font-family: "Jost", sans-serif;
+  h4 {
+    font-family: "Jost", sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 18.79px;
+    letter-spacing: -0.1805555522441864px;
+    text-align: left;
+    color: #3A4374;
+    margin-bottom: 9px;
+  }
+  p {
+    font-family: "Jost", sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 18.79px;
+    text-align: left;
+    color: #647196;
+    margin-bottom: 9px;
+  }
+  button {
+    border: unset;
+    background: unset;
+    padding: 5px 16px;
+    border-radius: 8px;
+    background-color: #F2F4FF;
+    color: #4661E6;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    margin: 5px;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 18.79px;
+  }
+}
+
+.feedbackcard-btns {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+li.card-item {
+  width: 327px;
+  margin: 0 auto;
+  position: relative;
+  z-index: -3;
+}
+
+.LikeBtn button{
+  display: flex;
+  width: 69px;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 13px;
+  margin: 0px;
+  cursor: pointer;
+}
+
+.comments-btn {
+  display: flex;
+  width: 69px;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 0px;
+  button {
+    margin: 0px;
+    border: unset;
+    background: unset;
+    cursor: pointer;
+  }
+}
+
+button.statusBtn {
+  margin: 0px;
+  margin-bottom: 16px;
+}
+
+.desktopLikeBtn {
+  display: none;
+}
+
+.desktopCommentsBtn{
+  display: none;
+}
+
+@media(width >= 768px) {
+  .card-items {
+    margin: 0 auto;
+    padding: 28px 32px;
+    color: #FFFFFF;
+    border-radius: 10px;
+    h4 {
+      margin-bottom: 15px;
+    }
+    p {
+      margin-bottom: 15px;
+    }
+  }
+
+  li.card-item {
+    width: 689px;
+    margin: 0 auto;
+  }
+
+  .card-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+
+  .card-item-text {
+    width: 476px;
+  }
+
+  .feedbackcard-btns {
+    display: none;
+  }
+
+  .desktopLikeBtn {
+    display: block;
+  }
+  
+  .desktopCommentsBtn{
+    display: block;
+  }
+}
+
+@media(width >= 1110px) {
+  li.card-item {
+    margin: 0 auto;
+    width: 826px;
+  }
+}

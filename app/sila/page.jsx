@@ -1,12 +1,17 @@
-import FilterBox from "@/components/FeedbackBoardCards/filter-box/filter-box";
-import RoadmapBox from "@/components/FeedbackBoardCards/roadmap-box/roadmap-box";
-import Sidebar from "@/components/FeedbackBoardCards/sidebar/Sidebar";
-import SidebarHome from "@/components/FeedbackBoardCards/sidebar/sidebarHome";
+import SidebarHome from "@/components/FeedbackBoardCards/sidebar/SidebarHome";
+import FeedbackCard from "@/components/FeedbackCard";
+import styles from "@/app/sila/sila.css";
 
-export default function Deneme() {
-  return(
-    <div>
-     <SidebarHome />
+export default function Page() {
+  return (
+    <div className={styles.container}>
+      <div className={styles.sidebar}>
+        <SidebarHome />
+      </div>
+
+      <main className={styles.content}>
+        <FeedbackCard />
+      </main>
     </div>
-  )
+  );
 }

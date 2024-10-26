@@ -5,7 +5,7 @@ export default function FeedbackHeader() {
     <>
       <div className="suggestionCount">
         <Idea />
-        <p><span>8</span> Suggestion</p>
+        <p><span>6</span> Suggestion</p>
       </div>
     </>
   )

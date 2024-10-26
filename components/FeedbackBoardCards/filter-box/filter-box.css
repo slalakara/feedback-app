@@ -1,12 +1,10 @@
 .FilterBoxButtons {
   margin: 0 auto;
+  font-family: "Jost", sans-serif;
   background-color: #ffff;
   border-radius: 10px;
   padding: 19px 24px;
   max-width: 223px;
-  font-size: 13px;
-  font-weight: 600;
-  line-height: 18.79px;
   button {
     border: unset;
     background: unset;
@@ -17,6 +15,9 @@
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
     margin: 5px;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 18.79px;
   }
 }
 

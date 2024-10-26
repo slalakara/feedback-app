@@ -6,9 +6,7 @@ import SidebarHome from "@/components/FeedbackBoardCards/sidebar/sidebarHome";
 export default function Deneme() {
   return(
     <div>
-      {/* <SidebarHome /> */}
-      <RoadmapBox />
-      <FilterBox />
+     <SidebarHome />
     </div>
   )
 }

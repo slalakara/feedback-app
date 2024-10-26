@@ -1,4 +1,28 @@
-/* Burger Menü Butonu */
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  background: radial-gradient(128.88% 128.88% at 103.9% -10.39%, #E84D70 0%, #A337F6 53.09%, #28A7ED 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+  z-index: 2000;
+  padding: 16px 24px;
+  h4 {
+    font-family: "Jost", sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 21.68px;
+    letter-spacing: -0.1875px;
+    text-align: left;
+    color: #FFFFFF;
+  }
+  p {
+    font-family: "Jost", sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 18.79px;
+    text-align: left;
+    color: #ffffffd1;
+  }
+}
+
 .burger-menu {
   font-size: 24px;
   cursor: pointer;
@@ -7,24 +31,28 @@
   background: none;
   position: fixed;
   top: 10px;
-  left: 10px;
-  z-index: 2;
+  right: 10px;
+  z-index: 100;
+  color: #FFFFFF;
 }
 
+.sidebar-boxes {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+}
 
-
-/* Yalnızca Mobilde Göster */
 @media (min-width: 768px) {
   .burger-menu {
     display: none;
   }
 }
 
-/* Sidebar Stili */
 .sidebar {
+  padding: 24px;
   width: 250px;
   height: 100vh;
-  background-color: #333;
+  background-color: #F7F8FD;
   color: white;
   position: fixed;
   top: 0;
@@ -34,7 +62,6 @@
   transition: right 0.3s ease;
 }
 
-/* Yalnızca Mobilde Göster */
 @media (min-width: 768px) {
   .sidebar {
     display: none;

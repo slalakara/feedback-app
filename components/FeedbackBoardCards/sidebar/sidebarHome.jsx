@@ -12,10 +12,15 @@ export default function SidebarHome() {
 
   return (
     <div>
-      {/* Burger Menü Butonu (Açık veya Kapalı Duruma Göre Değişen Simge) */}
-      <button className="burger-menu" onClick={toggleSidebar}>
-        {isSidebarOpen ? '✖' : '☰'}
-      </button>
+      <div className="sidebar-header">
+        <div className="sidebar-header-text">
+          <h4>Frontend Mentor</h4>
+          <p>Feedback Board</p>
+        </div>
+        <button className="burger-menu" onClick={toggleSidebar}>
+          {isSidebarOpen ? '✖' : '☰'}
+        </button>
+      </div>
 
       {/* Sidebar */}
       <Sidebar isOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
@@ -27,9 +32,6 @@ export default function SidebarHome() {
           padding: 10px;
           border: none;
           background: none;
-          position: fixed;
-          top: 10px;
-          left: 10px;
           z-index: 2;
         }
 

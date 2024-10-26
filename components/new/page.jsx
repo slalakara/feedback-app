@@ -6,7 +6,7 @@ export default function NewPage({ onCancel }) {
   return (
     <div className="newModalContainer">
       <div className="gobackbtn">
-        <GoBack onGoBack={onCancel} /> {/* Pass onCancel as onGoBack */}
+        <GoBack onGoBack={onCancel} /> 
       </div>
       <div className="newModal">
         <div className="addlogosvg">

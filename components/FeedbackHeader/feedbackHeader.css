@@ -1,0 +1,29 @@
+.addfeedback button{
+  border: unset;
+  background: unset;
+  font-family: Jost;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  color: #F2F4FE;
+  background-color: #AD1FEA;
+  padding: 12px 25px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.addfeedback button:hover{
+  background-color: #C75AF6;
+}
+.suggestionCount{
+  background-color: #373F68;
+  display: flex;
+  gap: 16px;
+}
+
+.suggestionCount p{
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  color: #fff;
+}

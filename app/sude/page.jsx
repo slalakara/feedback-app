@@ -5,6 +5,7 @@ import FeedbackHeader from "@/components/FeedbackHeader/feedbackHeader";
 import HeaderFilter from "@/components/FeedbackHeader/headerFilter";
 import NewPage from "@/components/new/page";
 import "./sude.css";
+import Comments from "@/components/comments/Comments";
 
 export default function Deneme() {
   const [showModal, setShowModal] = useState(false);
@@ -17,11 +18,14 @@ export default function Deneme() {
       <div className="deniyorum">
         <FeedbackHeader />
         <HeaderFilter />
-        <AddFeedbackBtn onClick={handleOpenModal} /> 
-      </div>
+        <AddFeedbackBtn onClick={handleOpenModal} />
 
+
+
+      </div>
+      <Comments />
       {showModal && (
-        <NewPage onCancel={handleCloseModal} /> 
+        <NewPage onCancel={handleCloseModal} />
       )}
     </>
   );

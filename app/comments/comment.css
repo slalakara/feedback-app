@@ -1,0 +1,11 @@
+.commentContainer{
+  margin: 0 auto;
+  max-width: 730px;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+
+}
+
+button{
+  cursor: pointer;
+}

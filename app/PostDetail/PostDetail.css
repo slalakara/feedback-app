@@ -1,0 +1,24 @@
+.container {
+  display: flex;
+}
+
+.sidebar {
+  flex-shrink: 0;
+  z-index: 0;
+}
+
+.content {
+  flex-grow: 1;
+  padding: 20px;
+  z-index: -3;
+  margin-top: 60px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+  .content {
+    margin-top: 0;
+  }
+}

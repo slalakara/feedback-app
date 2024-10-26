@@ -22,7 +22,6 @@ export default function SidebarHome() {
         </button>
       </div>
 
-      {/* Sidebar */}
       <Sidebar isOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
 
       <style jsx>{`

@@ -25,8 +25,3 @@
   }
 }
 
-@media(width >= 768px) {
-  .back-button {
-    padding-inline: 57px;
-  }
-}

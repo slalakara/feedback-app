@@ -1,5 +1,5 @@
 import LeftArrow from "../svgs/leftArrow";
-import "./goBack.css";
+import "./gobackBtn.css";
 
 export default function GoBack() {
   return (

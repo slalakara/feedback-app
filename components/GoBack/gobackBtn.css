@@ -7,18 +7,21 @@
   padding-top: 33px;
   padding-left: 24px;
   cursor: pointer;
-
-  button {
-    border: unset;
-    background: unset;
-  }
+  border: unset;
+  background: unset;
 
   & h4 {
-    font-family: League Spartan;
-    font-size: 15px;
+    
+    font-family: Jost;
+    font-size: 14px;
     font-weight: 700;
-    line-height: 15px;
-    letter-spacing: -0.25px;
+    line-height: 20.23px;
+    text-align: left;    
+    color: #647196;
+  }
+
+  & h4:hover{
+    text-decoration:underline;
   }
 }
 

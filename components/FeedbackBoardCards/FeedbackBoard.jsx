@@ -1,5 +1,8 @@
 export default function FeedbackBoard() {
   return(
-    <div>hello</div>
+    <div>
+      <h4>Frontend Mentor</h4>
+      <p>Feedback Board</p>
+    </div>
   )
 }

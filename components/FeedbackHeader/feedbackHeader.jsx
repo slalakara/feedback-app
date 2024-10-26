@@ -1,5 +1,5 @@
 import Idea from "../svgs/idea"
-
+import "./feedbackHeader.css"
 export default function FeedbackHeader() {
   return (
     <>

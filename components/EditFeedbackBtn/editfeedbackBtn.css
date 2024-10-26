@@ -1,0 +1,17 @@
+.editfeedback button {
+  border: unset;
+  background: unset;
+  font-family: Jost;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  color: #F2F4FE;
+  background-color: #4661E6;
+  padding: 12px 25px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.editfeedback button:hover {
+  background-color: #7C91F9;
+}

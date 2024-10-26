@@ -6,7 +6,6 @@ export default function deneme() {
   return (
     <>
       <div className="deniyorum">
-
         <FeedbackHeader />
         <HeaderFilter />
         <AddFeedbackBtn />

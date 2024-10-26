@@ -1,4 +1,4 @@
-.addfeedback button{
+.addfeedback button {
   border: unset;
   background: unset;
   font-family: Jost;
@@ -12,18 +12,89 @@
   border-radius: 10px;
 }
 
-.addfeedback button:hover{
+.addfeedback button:hover {
   background-color: #C75AF6;
 }
-.suggestionCount{
-  background-color: #373F68;
+
+.suggestionCount {
+
   display: flex;
   gap: 16px;
 }
 
-.suggestionCount p{
+.suggestionCount p {
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
   color: #fff;
+}
+
+
+
+.filter-options {
+  display: none;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0px 10px 40px -7px rgba(55, 63, 104, 0.35);
+  width: 100%; 
+}
+
+
+
+.header-filter {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 250px;
+ 
+
+}
+
+
+.header-filter:hover .filter-options,
+.filter-options:hover {
+  display: block;
+}
+
+.filter-text {
+  cursor: pointer;
+  color: #647196;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 23px;
+}
+
+
+.filter-option {
+  cursor: pointer;
+  padding: 5px 0;
+  display: flex; 
+  align-items: center;
+  color: #647196;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 23px;
+  width: 100%;
+  z-index: 2;
+  border-bottom: 1px solid rgba(58, 67, 116, 0.15);
+}
+
+
+.filter-option:last-child {
+  border-bottom: none;
+}
+
+.filter-option:hover {
+  color: #AD1FEA;
+
+}
+
+.check-mark {
+  color: #AD1FEA;
+  margin-left: 105px;
+  display: inline;
+  
 }

@@ -1,0 +1,32 @@
+.back-button {
+  padding-inline: 20px;
+  display: flex;
+  align-items: center;
+  gap: 23.66px;
+  margin-bottom: 24px;
+  padding-top: 33px;
+  padding-left: 24px;
+  cursor: pointer;
+  border: unset;
+  background: unset;
+
+  & h4 {
+    
+    font-family: Jost;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 20.23px;
+    text-align: left;    
+    color: #647196;
+  }
+
+  & h4:hover{
+    text-decoration:underline;
+  }
+}
+
+@media(width >= 768px) {
+  .back-button {
+    padding-inline: 57px;
+  }
+}

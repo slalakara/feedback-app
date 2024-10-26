@@ -7,6 +7,10 @@
   border-radius: 10px;
 }
 
+button{
+  cursor: pointer;
+}
+
 .gobackbtn{
   margin-right: 15px;
 }

@@ -2,11 +2,11 @@ import "./new.css";
 import AddLogo from "../svgs/add";
 import GoBack from "../GoBack/gobackBtn";
 
-export default function NewPage() {
+export default function NewPage({ onCancel }) {
   return (
     <div className="newModalContainer">
       <div className="gobackbtn">
-        <GoBack />
+        <GoBack onGoBack={onCancel} />
       </div>
       <div className="newModal">
         <div className="addlogosvg">
@@ -46,7 +46,7 @@ export default function NewPage() {
           </div>
 
           <div className="buttons">
-            <button className="cancel">Cancel</button>
+            <button className="cancel" onClick={onCancel}>Cancel</button>
             <button className="addFeedback">Add Feedback</button>
           </div>
         </div>

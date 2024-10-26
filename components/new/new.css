@@ -196,35 +196,34 @@ button{
 }
 
 @media screen and (max-width: 768px) {
-  .editModal {
+  .newModal {
     width: 327px;
+  }
+
+  .newHero {
+    padding-inline: 24px;
 
     & h1 {
-      font-family: Jost;
-      font-size: 18px;
-      font-weight: 700;
-      line-height: 26.01px;
-      letter-spacing: -0.25px;
-      text-align: left;
-      padding-left: 0px;
-      padding-inline: 24px;
+      font-size: 20px;
+      line-height: 28.8px;
+      padding-top: 32px;
+      padding-bottom: 24px;
     }
   }
 
-  .editHero {
-    padding-inline: 24px;
-  }
-
-  .heroItem {
+  .feedback {
     & input {
-      width: 279px;
-
+      width: 100%;
     }
+  }
 
+  .category {
     & select {
       width: 100%;
     }
+  }
 
+  .details {
     & textarea {
       width: 100%;
     }
@@ -233,23 +232,16 @@ button{
   .buttons {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    gap: 16px;
     padding: 0;
-    padding-bottom: 16px;
+    padding-bottom: 24px;
 
-    & .addCancel {
-      display: flex;
-      flex-direction: column;
+    & .cancel {
       text-align: center;
+    }
 
-      & .cancel {
-        text-align: center;
-      }
-
-      & .addFeedback {
-        text-align: center;
-      }
+    & .addFeedback {
+      text-align: center;
     }
   }
+
 }

@@ -1,9 +1,9 @@
-"use client"
+"use client";
 import { useState } from "react";
 import "./feedbackHeader.css";
 
 export default function HeaderFilter() {
-  const [selectedFilter, setSelectedFilter] = useState(null);
+  const [selectedFilter, setSelectedFilter] = useState("Most Upvotes");
   const [showOptions, setShowOptions] = useState(false);
 
   const handleFilterClick = (filter) => {
@@ -15,7 +15,7 @@ export default function HeaderFilter() {
   };
 
   const handleMouseLeave = () => {
-    setTimeout(() => setShowOptions(false), 10000); 
+    setTimeout(() => setShowOptions(false), 10000);
   };
 
   return (
@@ -24,7 +24,9 @@ export default function HeaderFilter() {
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      <p className="filter-text">Sort by : <strong>Most Upvotes</strong> </p>
+      <p className="filter-text">
+        Sort by: <strong>{selectedFilter}</strong> 
+      </p>
       {showOptions && (
         <div className="filter-options">
           <p
@@ -33,7 +35,10 @@ export default function HeaderFilter() {
             }`}
             onClick={() => handleFilterClick("Most Upvotes")}
           >
-            Most Upvotes {selectedFilter === "Most Upvotes" && <span className="check-mark">✔</span>}
+            Most Upvotes{" "}
+            {selectedFilter === "Most Upvotes" && (
+              <span className="check-mark">✔</span>
+            )}
           </p>
           <p
             className={`filter-option ${
@@ -41,7 +46,10 @@ export default function HeaderFilter() {
             }`}
             onClick={() => handleFilterClick("Least Upvotes")}
           >
-            Least Upvotes {selectedFilter === "Least Upvotes" && <span className="check-mark">✔</span>}
+            Least Upvotes{" "}
+            {selectedFilter === "Least Upvotes" && (
+              <span className="check-mark">✔</span>
+            )}
           </p>
           <p
             className={`filter-option ${
@@ -49,7 +57,10 @@ export default function HeaderFilter() {
             }`}
             onClick={() => handleFilterClick("Most Comments")}
           >
-            Most Comments {selectedFilter === "Most Comments" && <span className="check-mark">✔</span>}
+            Most Comments{" "}
+            {selectedFilter === "Most Comments" && (
+              <span className="check-mark">✔</span>
+            )}
           </p>
           <p
             className={`filter-option ${
@@ -57,7 +68,10 @@ export default function HeaderFilter() {
             }`}
             onClick={() => handleFilterClick("Least Comments")}
           >
-            Least Comments {selectedFilter === "Least Comments" && <span className="check-mark">✔</span>}
+            Least Comments{" "}
+            {selectedFilter === "Least Comments" && (
+              <span className="check-mark">✔</span>
+            )}
           </p>
         </div>
       )}

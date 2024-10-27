@@ -1,0 +1,29 @@
+{
+   "categories": [
+    {
+      "id": 1,
+      "name": "UI",
+      "slug": "UI"
+    },
+    {
+      "id": 2,
+      "name": "UX",
+      "slug": "UX"
+    },
+    {
+      "id": 3,
+      "name": "Bug",
+      "slug": "Bug"
+    },
+    {
+      "id": 4,
+      "name": "Enhancement",
+      "slug": "Enhancement"
+    },
+    {
+      "id": 5,
+      "name": "Feature",
+      "slug": "Feature"
+    }
+  ]
+}

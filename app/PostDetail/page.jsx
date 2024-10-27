@@ -3,7 +3,20 @@ import FeedbackCard from "@/components/FeedbackCard";
 import styles from "@/app/PostDetail/PostDetail.css";
 import FeedbackHeaderComp from "@/components/FeedbackHeader/FeedbackHeaderComp";
 
-export default function Page() {
+export const metadata = {
+    title: {
+        absolute: "Stories"
+    }
+}
+
+export default function Page({searchParams}) {
+    let url = `${process.env.API_ROOT_URL}${process.env.API_ENDPOINT}${process.env.API_FEEDBACKS_ENDPOINT}`
+    if(searchParams?.category){
+        url = `${url}?category=${category}`
+    }
+
+    console.log(url);
+
   return (
     <div className={styles.container}>
       <div className={styles.sidebar}>

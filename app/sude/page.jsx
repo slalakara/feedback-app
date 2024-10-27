@@ -20,7 +20,9 @@ export default function Deneme() {
         <HeaderFilter />
         <AddFeedbackBtn onClick={handleOpenModal} />
       </div>
-
+      {showModal && (
+        <NewPage onCancel={handleCloseModal} />
+      )}
     </>
   );
 }

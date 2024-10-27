@@ -1,0 +1,210 @@
+.roadmap {
+  background-color: #F7F8FD;
+  font-family: 'Jost', sans-serif;
+}
+
+.status-list {
+  display: flex;
+  margin: 0 auto;
+  text-align: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 10px;
+  li {
+    list-style: none;
+  }
+  button {
+    font-family: 'Jost', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 18.79px;
+    letter-spacing: -0.1805555522441864px;
+    text-align: center;
+    color: #647196;
+  }
+}
+
+.feedbackLike-btns {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.comments-btn button {
+  border: unset;
+  background: unset;
+}
+
+.status-list li {
+  flex: 1;
+}
+
+.status-list button {
+  padding: 10px;
+  border: none;
+  background: unset;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.status-list button.active {
+  color: #3A4374;
+}
+
+.feedback-list .feedback-card {
+  display: block;
+}
+
+ul {
+  list-style: none;
+}
+
+.status-list {
+  display: flex;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+}
+
+.status-list li {
+  margin: 0;
+}
+
+.feedback-list {
+  margin-top: 20px;
+  padding: 10px;
+}
+
+.active {
+  transform: scale(1.05);
+  position: relative;
+  transition: color 0.5s ease, border-color 0.5s ease;
+}
+
+.active::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.active.planned::after {
+  background-color: #F49F85;
+}
+
+.active.in-progress::after {
+  background-color: #AD1FEA;
+}
+
+.active.live::after {
+  background-color: #62BCFA;
+}
+
+.feedback-card {
+  margin: 0 auto;
+  padding: 24px;
+  color: #FFFFFF;
+  background-color: #fff;
+  max-width: 350px;
+  border-radius: 10px;
+  margin-bottom: 24px;
+  font-family: "Jost", sans-serif;
+  h4 {
+    font-family: "Jost", sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 18.79px;
+    letter-spacing: -0.1805555522441864px;
+    text-align: left;
+    color: #3A4374;
+    margin-bottom: 9px;
+  }
+  p {
+    font-family: "Jost", sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 18.79px;
+    text-align: left;
+    color: #647196;
+    margin-bottom: 9px;
+  }
+  button {
+    border: unset;
+    background: unset;
+    padding: 5px 16px;
+    border-radius: 8px;
+    background-color: #F2F4FF;
+    color: #4661E6;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    margin: 5px;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 18.79px;
+  }
+}
+
+.feedback-card.planned {
+  border-top: 4px solid #F49F85;
+}
+
+.feedback-card.in-progress {
+  border-top: 4px solid #AD1FEA;
+}
+
+.feedback-card.live {
+  border-top: 4px solid #62BCFA;
+  margin: 0 auto;
+}
+
+.desktop {
+  display: none;
+}
+
+@media(width >= 768px) {
+  .mobileSelectedStatus {
+    display: none;
+  }
+
+  .desktop {
+    max-width: 1216px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    h3 {
+      margin-bottom: 15px;
+    }
+  }
+  
+  .desktop > div {
+    flex: 1;
+    min-width: 200px;
+  }
+  
+  .feedback-card {
+    border: 1px solid #fff;
+    border-radius: 5px;
+    padding: 16px;
+    margin-bottom: 16px;
+    background-color: #fff;
+  }
+
+  .feedback-card {
+    margin: 24px 0px;
+    text-align: left;
+  }
+
+  .feedback-card.live {
+    margin: 24px 0px;
+  }
+
+  .feedback-list {
+    display: none;
+  }
+}
+

@@ -1,0 +1,28 @@
+.EmptyPage {
+  margin: 0 auto;
+  text-align: center;
+  padding: 76px 24px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  border-radius: 10px;
+  h3 {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 26.01px;
+    letter-spacing: -0.25px;
+    text-align: center;
+    color: #3A4374;
+  }
+  p {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 18.79px;
+    text-align: center;
+    color: #647196;
+  }
+  svg {
+    margin-bottom: 20px;
+  }
+}

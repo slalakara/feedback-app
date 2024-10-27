@@ -16,11 +16,6 @@
   background-color: #C75AF6;
 }
 
-.suggestionCount {
-  display: flex;
-  gap: 16px;
-}
-
 .suggestionCount p {
   font-weight: 700;
   font-size: 18px;
@@ -36,7 +31,7 @@
   border-radius: 10px;
   background: rgba(255, 255, 255, 1);
   box-shadow: 0px 10px 40px -7px rgba(55, 63, 104, 0.35);
-  width: 100%; 
+  width: 100%;
 }
 
 .header-filter {
@@ -63,7 +58,7 @@
 .filter-option {
   cursor: pointer;
   padding: 5px 0;
-  display: flex; 
+  display: flex;
   align-items: center;
   color: #647196;
   font-size: 14px;
@@ -88,7 +83,7 @@
   color: #AD1FEA;
   margin-left: 105px;
   display: inline;
-  
+
 }
 
 .header-filter {
@@ -125,10 +120,15 @@
   padding-top: 20px;
 }
 
-@media (min-width: 1110px){
-  .suggestionCount{
+
+
+@media (min-width: 767px) {
+
+  .suggestionCount {
     display: flex;
+    gap: 16px;
   }
+
 
   .Header {
     height: none;

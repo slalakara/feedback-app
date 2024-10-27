@@ -19,9 +19,6 @@ export default function Deneme() {
         <FeedbackHeader />
         <HeaderFilter />
         <AddFeedbackBtn onClick={handleOpenModal} />
-
-
-
       </div>
 
     </>

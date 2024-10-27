@@ -23,10 +23,7 @@ export default function Deneme() {
 
 
       </div>
-      <Comments />
-      {showModal && (
-        <NewPage onCancel={handleCloseModal} />
-      )}
+
     </>
   );
 }

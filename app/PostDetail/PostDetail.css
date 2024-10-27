@@ -1,5 +1,6 @@
 .container {
   display: flex;
+  background-color: #F7F8FD;
 }
 
 .sidebar {
@@ -8,9 +9,9 @@
 }
 
 .content {
+  background-color: #F7F8FD;
   flex-grow: 1;
-  padding: 20px;
-  z-index: -3;
+  z-index: 1;
   margin-top: 60px;
 }
 

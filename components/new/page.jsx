@@ -4,15 +4,15 @@ import GoBack from "../GoBack/gobackBtn";
 
 export default function NewPage({ onCancel }) {
   return (
-    <div className="newModalContainer">
-      <div className="gobackbtn">
-        <GoBack onGoBack={onCancel} /> 
-      </div>
+    <div className="newModalOverlay">
       <div className="newModal">
+        <div className="gobackbtn">
+          <GoBack onGoBack={onCancel} />
+        </div>
         <div className="addlogosvg">
           <AddLogo />
         </div>
-        <div className="newHero">
+        <form className="newHero">
           <h1>Create New Feedback</h1>
 
           <div className="feedback">
@@ -46,10 +46,10 @@ export default function NewPage({ onCancel }) {
           </div>
 
           <div className="buttons">
-            <button className="cancel" onClick={onCancel}>Cancel</button>
-            <button className="addFeedback">Add Feedback</button>
+            <button type="button" className="cancel" onClick={onCancel}>Cancel</button>
+            <button type="submit" className="addFeedback">Add Feedback</button>
           </div>
-        </div>
+        </form>
       </div>
     </div>
   );

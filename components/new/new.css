@@ -6,6 +6,102 @@
   position: relative;
   border-radius: 10px;
 }
+.newModalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* Modal Box Styling */
+.newModal {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  width: 90%;
+  max-width: 540px;
+  position: relative;
+}
+
+/* Existing Styles */
+button {
+  cursor: pointer;
+}
+.gobackbtn {
+  margin-right: 15px;
+}
+.addlogosvg {
+  position: relative;
+  bottom: 28px;
+  left: 42px;
+}
+.newHero {
+  padding-left: 42px;
+}
+.newHero h1 {
+  font-family: Jost;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 34.68px;
+  color: #3A4374;
+  padding-bottom: 40px;
+}
+.feedback input,
+.category select,
+.details textarea {
+  width: 456px;
+  height: 48px;
+  border-radius: 5px;
+  border: none;
+  background-color: #f7f8fd;
+}
+.buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+  padding-right: 42px;
+  padding-bottom: 40px;
+}
+.cancel {
+  padding: 14px 24px;
+  background-color: #3A4374;
+  color: #F2F4FE;
+  border: none;
+  border-radius: 10px;
+}
+.addFeedback {
+  padding: 14px 24px;
+  background-color: #AD1FEA;
+  color: #F2F4FE;
+  border: none;
+  border-radius: 10px;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  .newModal {
+    width: 327px;
+  }
+  .newHero {
+    padding-inline: 24px;
+  }
+  .feedback input,
+  .category select,
+  .details textarea {
+    width: 100%;
+  }
+  .buttons {
+    flex-direction: column;
+    padding: 0;
+    padding-bottom: 24px;
+  }
+}
 
 button{
   cursor: pointer;

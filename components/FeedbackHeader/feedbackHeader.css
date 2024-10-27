@@ -125,6 +125,8 @@
   padding-top: 20px;
 }
 
+
+
 @media (min-width: 1110px){
   .suggestionCount{
     display: flex;

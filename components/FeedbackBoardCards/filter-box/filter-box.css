@@ -1,11 +1,11 @@
-.FilterBoxButtons {
+.Categories {
   margin: 0 auto;
   font-family: "Jost", sans-serif;
   background-color: #ffff;
   border-radius: 10px;
   padding: 19px 24px;
   max-width: 223px;
-  padding-top: 80px;
+  z-index: 3;
   button {
     border: unset;
     background: unset;
@@ -22,7 +22,13 @@
   }
 }
 
-.FilterBoxButtons button.selected {
+.Categories button.selected {
   background-color: #4661E6;
   color: #FFFFFF;
+}
+
+.CategoryItem {
+  button {
+    cursor: pointer;
+  }
 }

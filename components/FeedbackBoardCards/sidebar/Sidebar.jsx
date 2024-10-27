@@ -4,11 +4,11 @@ import "@/components/FeedbackBoardCards/sidebar/sidebar.css"
 import FilterBox from '../filter-box/filter-box';
 import RoadmapBox from '../roadmap-box/roadmap-box';
 
-export default function Sidebar({ isOpen, toggleSidebar }) {
+export default function Sidebar({ isOpen, toggleSidebar, categories }) {
   return (
     <div className={`sidebar ${isOpen ? 'open' : ''}`}>
         <div className="sidebar-boxes">
-          <FilterBox />
+          <FilterBox categories={categories} />
           <RoadmapBox />
         </div>
       <style jsx>{`

@@ -4,6 +4,7 @@
   background: radial-gradient(128.88% 128.88% at 103.9% -10.39%, #E84D70 0%, #A337F6 53.09%, #28A7ED 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
   z-index: 2000;
   padding: 16px 24px;
+  position: relative;
   h4 {
     font-family: "Jost", sans-serif;
     font-size: 15px;

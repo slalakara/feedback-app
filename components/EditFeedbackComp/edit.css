@@ -1,0 +1,206 @@
+
+button {
+  cursor: pointer;
+}
+
+.editModal {
+  margin: 0 auto;
+  width: 540px;
+  background-color: #fff;
+  border-radius: 10px;
+
+
+  & h1 {
+    font-family: Jost;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 34.68px;
+    letter-spacing: -0.3333333432674408px;
+    text-align: left;
+    color: #3A4374;
+    padding-top: 52px;
+    padding-bottom: 75px;
+    padding-inline: 42px;
+  }
+}
+
+.editsvg{
+  position: relative;
+  bottom: 28px;
+  left: 42px;
+}
+
+.editHero {
+  padding-left: 42px;
+}
+
+.heroItem {
+  padding-bottom: 24px;
+
+  & h3 {
+    font-family: Jost;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 20.23px;
+    letter-spacing: -0.1944444477558136px;
+    text-align: left;
+    color: #3A4374;
+  }
+
+  & p {
+    font-family: Jost;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20.23px;
+    padding-bottom: 16px;
+    text-align: left;
+    color: #647196;
+  }
+
+  & input {
+    width: 456px;
+    height: 48px;
+    gap: 0px;
+    border-radius: 5px 0px 0px 0px;
+    opacity: 0px;
+    padding-left: 24px;
+    border: none;
+    background-color: #f7f8fd;
+  }
+
+  & select {
+    width: 456px;
+    height: 48px;
+    padding-left: 24px;
+    border-radius: 5px 0px 0px 0px;
+    padding-right: 24px;
+    appearance: none;
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    /* Mavi ok simgesi */
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="blue" viewBox="0 0 16 16"><path d="M4 6l4 4 4-4z"/></svg>');
+    /* Mavi ok simgesi */
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+    background-size: 16px;
+    background-color: #f7f8fd;
+  }
+
+  & textarea {
+    width: 456px;
+    height: 96px;
+    border-radius: 5px 0px 0px 0px;
+    border: none;
+    padding-left: 24px;
+    padding-top: 16px;
+    background-color: #f7f8fd;
+  }
+}
+
+.buttons {
+  padding-right: 42px;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 40px;
+
+  & .delete {
+    padding: 12px 24px;
+    border-radius: 10px;
+    border: none;
+    background-color: #D73737;
+    color: #fff;
+  }
+
+
+  & .addCancel {
+    display: flex;
+    gap: 16px;
+
+    & .cancel {
+      padding: 14px 24px;
+      background-color: #3A4374;
+      font-family: Jost;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 20.23px;
+      border: none;
+      border-radius: 10px;
+      text-align: left;
+      color: #F2F4FE;
+    }
+
+    .addFeedback {
+      padding: 14px 24px;
+      background-color: #AD1FEA;
+      font-family: Jost;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 20.23px;
+      border: none;
+      border-radius: 10px;
+      text-align: left;
+      color: #F2F4FE;
+    }
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .editModal {
+    width: 327px;
+
+    & h1 {
+      font-family: Jost;
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 26.01px;
+      letter-spacing: -0.25px;
+      text-align: left;
+      padding-left: 0px;
+      padding-inline: 24px;
+    }
+  }
+
+  .editHero {
+    padding-inline: 24px;
+  }
+
+  .heroItem {
+    & input {
+      width: 279px;
+
+    }
+
+    & select {
+      width: 100%;
+    }
+
+    & textarea {
+      width: 100%;
+    }
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+    padding: 0;
+    padding-bottom: 16px;
+
+    & .addCancel {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+
+      & .cancel {
+        text-align: center;
+      }
+
+      & .addFeedback {
+        text-align: center;
+      }
+    }
+  }
+}

@@ -1,4 +1,17 @@
-.commentContainer{
+.feedbackDetailContainer {
+  margin: 0 auto;
+  max-width: 730px;
+  border-radius: 10px;
+}
+
+.detailcompHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.commentContainer {
   margin: 0 auto;
   max-width: 730px;
   background-color: #FFFFFF;
@@ -6,6 +19,17 @@
 
 }
 
-button{
+button {
   cursor: pointer;
+}
+
+@media(width>=1110px) {
+  .feedbackDetailContainer {
+    margin: 0 auto;
+  }
+
+  .detailcompHeader {
+    margin: 0 auto;
+
+  }
 }

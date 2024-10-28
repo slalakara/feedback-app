@@ -28,7 +28,9 @@
   .container {
     flex-direction: column;
   }
+  
   .content {
     margin-top: 0;
+    width: 825px;
   }
 }

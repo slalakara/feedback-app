@@ -18,7 +18,7 @@ export default function HeaderFilter() {
   };
 
   const handleMouseLeave = () => {
-    setShowOptions(false);
+    setShowOptions(true);
   };
 
   return (

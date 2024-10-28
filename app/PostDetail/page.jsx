@@ -3,19 +3,19 @@ import FeedbackCard from "@/components/FeedbackCard";
 import styles from "@/app/PostDetail/PostDetail.css";
 import FeedbackHeaderComp from "@/components/FeedbackHeader/FeedbackHeaderComp";
 
-export const metadata = {
-    title: {
-        absolute: "Stories"
-    }
-}
+// export const metadata = {
+//     title: {
+//         absolute: "Stories"
+//     }
+// }
 
 export default function Page({searchParams}) {
-    let url = `${process.env.API_ROOT_URL}${process.env.API_ENDPOINT}${process.env.API_FEEDBACKS_ENDPOINT}`
-    if(searchParams?.category){
-        url = `${url}?category=${category}`
-    }
+    // let url = `${process.env.API_ROOT_URL}${process.env.API_ENDPOINT}${process.env.API_FEEDBACKS_ENDPOINT}`
+    // if(searchParams?.category){
+    //     url = `${url}?category=${category}`
+    // }
 
-    console.log(url);
+    // console.log(url);
 
   return (
     <div className={styles.container}>

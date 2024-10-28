@@ -1,3 +1,43 @@
 .board-header-mobil {
   display: block;
 }
+
+.FeedbackBoardHeaderMobile {
+  display: block;
+}
+
+.FeedbackBoardHeaderTablet {
+  display: none;
+}
+
+.FeedbackBoardHeaderDesktop {
+  display: none;
+}
+
+@media(width >= 768px) {
+  .FeedbackBoardHeaderMobile {
+    display: none;
+  }
+  
+  .FeedbackBoardHeaderTablet {
+    display: block;
+  }
+  
+  .FeedbackBoardHeaderDesktop {
+    display: none;
+  }
+}
+
+@media(width >= 1110px) {
+  .FeedbackBoardHeaderMobile {
+    display: none;
+  }
+  
+  .FeedbackBoardHeaderTablet {
+    display: none;
+  }
+  
+  .FeedbackBoardHeaderDesktop {
+    display: block;
+  }
+}

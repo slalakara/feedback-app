@@ -17,8 +17,7 @@ export default function FilterBox() {
   return (
     <div className="Categories">
       <div className="CategoryItem">
-        <button onClick={() => router.push(`${pathname}`)}>Hepsi</button>
-        <ul>
+        <button onClick={() => router.push(`${pathname}`)}>All</button>
           {categories.categories && categories.categories.length > 0 ? (
             categories.categories.map((category, index) => (
                 <button onClick={() => router.push(`${pathname}?${createQueryString("category", category.slug)}`)}>
@@ -28,29 +27,7 @@ export default function FilterBox() {
           ) : (
             <p>No categories available</p>
           )}
-        </ul>
       </div>
     </div>
   );
 }
-
-
-{/* 
-  const [selectedFilter, setSelectedFilter] = useState("All");
-  const handleFilterClick = (filter) => {
-    setSelectedFilter(filter);
-  };
-
-  className={selectedFilter === filter ? "selected" : ""}
-  <div className="FilterBoxButtons">
-  {["All", "UI", "UX", "Enhancement", "Bug", "Feature"].map((filter) => (
-    <button
-      key={filter}
-      onClick={() => router.push(`${pathname}`)}
-      className={selectedFilter === filter ? "selected" : ""}
-    >
-      {filter}
-    </button>
-    ))}
-  </div>
-*/}

@@ -1,11 +1,22 @@
-import "./edit.css"
-import Edit from "../svgs/edit"
-import GoBack from "../GoBack/gobackBtn"
-export default function EditModal() {
+"use client";
+import { useRouter } from 'next/navigation';
+import "./edit.css";
+import Edit from "../svgs/edit";
+import GoBack from "../GoBack/gobackBtn";
+
+export default function EditModal({ onClose }) { 
+  const router = useRouter(); 
+
+  const handleCancel = () => {
+    onClose();
+  };
+
   return (
-    <div className="editmodalContainer">
-      <GoBack />
+    <div className="editModalOverlay">
       <div className="editModal">
+        <div className="gobackbtn">
+          <GoBack onGoBack={onClose} /> 
+        </div>
         <div className="editsvg">
           <Edit />
         </div>
@@ -54,12 +65,12 @@ export default function EditModal() {
           <div className="buttons">
             <button className="delete">Delete</button>
             <div className="addCancel">
-              <button className="cancel">Cancel</button>
+              <button className="cancel" onClick={handleCancel}>Cancel</button> 
               <button className="addFeedback">Add Feedback</button>
             </div>
           </div>
         </div>
       </div>
     </div>
-  )
+  );
 }

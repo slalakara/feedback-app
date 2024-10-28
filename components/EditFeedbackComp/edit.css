@@ -78,9 +78,9 @@ button {
     background-color: white;
     border: none;
     border-radius: 5px;
-    /* Mavi ok simgesi */
+    
     background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="blue" viewBox="0 0 16 16"><path d="M4 6l4 4 4-4z"/></svg>');
-    /* Mavi ok simgesi */
+  
     background-repeat: no-repeat;
     background-position: right 8px center;
     background-size: 16px;
@@ -203,4 +203,36 @@ button {
       }
     }
   }
+} 
+
+
+.editModalOverlay {
+  position: fixed; 
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); 
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+  overflow: hidden; 
+  z-index: 999; 
+}
+
+.editModal {
+  background: white;
+  border-radius: 8px; 
+  width: 90%; 
+  max-width: 600px; 
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+  overflow-y: auto;
+  max-height: 80vh; 
+}
+
+.buttons {
+  display: flex; 
+  justify-content: space-between; 
+  margin-top: 20px;
 }

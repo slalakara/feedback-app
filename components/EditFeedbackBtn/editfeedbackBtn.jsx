@@ -1,11 +1,9 @@
-import "./editfeedbackBtn.css"
+import "./editfeedbackBtn.css";
 
-export default function EditFeedbackBtn(){
-  return(
-    <>
+export default function EditFeedbackBtn({ onEditClick }) { 
+  return (
     <div className="editfeedback">
-      <button>Edit Feedback</button>
+      <button onClick={onEditClick}>Edit Feedback</button> 
     </div>
-    </>
-  )
+  );
 }

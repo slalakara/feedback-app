@@ -20,7 +20,7 @@ export default function Sidebar({ isOpen, toggleSidebar, categories }) {
           position: fixed;
           top: 0;
           right: ${isOpen ? '0' : '-300px'};
-          z-index: -1;
+          z-index: 1;
           padding-top: 90px;
           transition: right 0.3s ease;
         }

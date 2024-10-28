@@ -1,7 +1,10 @@
-"use client"
+"use client";
 import { useState } from 'react';
 import Sidebar from './Sidebar';
-import "@/components/FeedbackBoardCards/sidebar/sidebar.css"
+import FilterBox from '../filter-box/filter-box';
+import RoadmapBox from '../roadmap-box/roadmap-box';
+import "@/components/FeedbackBoardCards/sidebar/sidebar.css";
+import BoardBoxHeader from '../boardbox-header/box-header';
 
 export default function SidebarHome() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -11,18 +14,22 @@ export default function SidebarHome() {
   };
 
   return (
-    <div>
-      <div className="sidebar-header">
-        <div className="sidebar-header-text">
-          <h4>Frontend Mentor</h4>
-          <p>Feedback Board</p>
+    <div className="Home">
+        <div className="mobile-boardbox-header">
+            <BoardBoxHeader />
+          <button className="burger-menu" onClick={toggleSidebar}>
+            {isSidebarOpen ? '✖' : '☰'}
+          </button>
         </div>
-        <button className="burger-menu" onClick={toggleSidebar}>
-          {isSidebarOpen ? '✖' : '☰'}
-        </button>
-      </div>
-
       <Sidebar isOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
+
+      <div className="FeedbackBoardHeaderDesktop">
+        <div className="desktop-boardbox-header">
+          <BoardBoxHeader />
+        </div>
+        <FilterBox />
+        <RoadmapBox />
+      </div> 
 
       <style jsx>{`
         .burger-menu {
@@ -31,12 +38,52 @@ export default function SidebarHome() {
           padding: 10px;
           border: none;
           background: none;
-          z-index: 2;
+          z-index: 4;
+        }
+
+        .mobile-boardbox-header {
+          display: block;
+        }
+
+        .desktop-boardbox-header {
+          display: none;
+        }
+
+        .FeedbackBoardHeaderTablet {
+          display: none;
+        }
+
+        .FeedbackBoardHeaderDesktop {
+          display: none;
+          flex-direction: row;
+          align-items: center;
+          gap: 20px; /* Aralarındaki boşluk */
         }
 
         @media (min-width: 768px) {
           .burger-menu {
             display: none;
+          }
+
+          .mobile-boardbox-header {
+            display: none;
+          }
+
+          .desktop-boardbox-header {
+            display: block;
+          }
+
+          .sidebar-header {
+            display: none;
+          }
+
+          .FeedbackBoardHeaderTablet {
+            display: flex;
+            justify-content: space-around;
+          }
+
+          .FeedbackBoardHeaderDesktop {
+            display: flex;
           }
         }
       `}</style>

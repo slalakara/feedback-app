@@ -1,31 +1,35 @@
+
+import { fetchFeedbacks } from "@/utils/func";
 import SidebarHome from "@/components/FeedbackBoardCards/sidebar/SidebarHome";
 import FeedbackCard from "@/components/FeedbackCard";
-import styles from "@/app/PostDetail/PostDetail.css";
 import FeedbackHeaderComp from "@/components/FeedbackHeader/FeedbackHeaderComp";
+import CommentArea from "../comments/page"; // Yorum alanını içe aktar
+import styles from "@/app/PostDetail/PostDetail.css";
 
-// export const metadata = {
-//     title: {
-//         absolute: "Stories"
-//     }
-// }
 
-export default function Page({searchParams}) {
-    // let url = `${process.env.API_ROOT_URL}${process.env.API_ENDPOINT}${process.env.API_FEEDBACKS_ENDPOINT}`
-    // if(searchParams?.category){
-    //     url = `${url}?category=${category}`
-    // }
+export default async function Page({ searchParams }) {
+  let feedbacks = [];
 
-    // console.log(url);
+  try {
+    feedbacks = await fetchFeedbacks(searchParams?.category);
+  } catch (error) {
+    console.error("Feedbacks alınamadı:", error);
+  }
 
   return (
     <div className={styles.container}>
       <div className={styles.sidebar}>
         <SidebarHome />
       </div>
-
       <main className={styles.content}>
         <FeedbackHeaderComp />
-        <FeedbackCard />
+        {feedbacks.length > 0 ? (
+          feedbacks.map((feedback) => (
+            <FeedbackCard key={feedback.id} feedback={feedback} />
+          ))
+        ) : (
+          <p>Hiç geri bildirim yok.</p>
+        )}
       </main>
     </div>
   );

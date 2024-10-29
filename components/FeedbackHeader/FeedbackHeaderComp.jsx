@@ -19,8 +19,10 @@ export default function FeedbackHeaderComp() {
 
   return (
     <div className="Header">
-      <FeedbackHeader />
-      <HeaderFilter />
+      <div className="short">
+        <FeedbackHeader />
+        <HeaderFilter />
+      </div>
       <AddFeedbackBtn onClick={openModal} />
 
       {isModalOpen && (

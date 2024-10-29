@@ -4,6 +4,7 @@
   color: #FFFFFF;
   border-radius: 10px;
   font-family: "Jost", sans-serif;
+
   h4 {
     font-family: "Jost", sans-serif;
     font-size: 13px;
@@ -14,6 +15,7 @@
     color: #3A4374;
     margin-bottom: 9px;
   }
+
   p {
     font-family: "Jost", sans-serif;
     font-size: 13px;
@@ -23,6 +25,7 @@
     color: #647196;
     margin-bottom: 9px;
   }
+
   button {
     border: unset;
     background: unset;
@@ -52,7 +55,7 @@ li.card-item {
   z-index: -3;
 }
 
-.LikeBtn button{
+.LikeBtn button {
   display: flex;
   width: 69px;
   align-items: center;
@@ -68,6 +71,7 @@ li.card-item {
   align-items: center;
   gap: 8px;
   padding: 7px 0px;
+
   button {
     margin: 0px;
     border: unset;
@@ -85,19 +89,21 @@ button.statusBtn {
   display: none;
 }
 
-.desktopCommentsBtn{
+.desktopCommentsBtn {
   display: none;
 }
 
-@media(width >= 768px) {
+@media(width >=768px) {
   .card-items {
     margin: 0 auto;
     padding: 28px 32px;
     color: #FFFFFF;
     border-radius: 10px;
+
     h4 {
       margin-bottom: 15px;
     }
+
     p {
       margin-bottom: 15px;
     }
@@ -126,15 +132,22 @@ button.statusBtn {
   .desktopLikeBtn {
     display: block;
   }
-  
-  .desktopCommentsBtn{
+
+  .desktopCommentsBtn {
     display: block;
   }
 }
 
-@media(width >= 1110px) {
+@media(width >=1110px) {
   li.card-item {
     margin: 0 auto;
     width: 826px;
+  }
+
+  .card-items {
+    position: fixed;
+    margin-top: 200px;
+    margin-left: 450px;
+    background-color: #fff;
   }
 }

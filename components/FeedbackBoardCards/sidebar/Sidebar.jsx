@@ -24,6 +24,10 @@ export default function Sidebar({ isOpen, toggleSidebar, categories }) {
           padding-top: 90px;
           transition: right 0.3s ease;
         }
+
+        .sidebar:open {
+          display: block;
+        }
        
         ul {
           list-style-type: none;

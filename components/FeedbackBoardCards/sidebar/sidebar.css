@@ -71,6 +71,10 @@
   color: #FFFFFF;
 }
 
+.sidebar.jsx-2689626022 {
+  display: block;
+}
+
 .sidebar-boxes {
   display: flex;
   flex-direction: column;
@@ -84,6 +88,10 @@
 
 @media (min-width: 768px) {
   .burger-menu {
+    display: none;
+  }
+
+  .sidebar.jsx-2689626022 {
     display: none;
   }
 
@@ -146,6 +154,10 @@
 
 @media(min-width: 1110px) {
   .FeedbackBoardHeaderTablet {
+    display: none;
+  }
+
+  .sidebar.jsx-2689626022 {
     display: none;
   }
 

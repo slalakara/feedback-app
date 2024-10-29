@@ -15,12 +15,12 @@ export default function SidebarHome() {
 
   return (
     <div className="Home">
-        <div className="mobile-boardbox-header">
-            <BoardBoxHeader />
-          <button className="burger-menu" onClick={toggleSidebar}>
-            {isSidebarOpen ? '✖' : '☰'}
-          </button>
-        </div>
+      <div className="mobile-boardbox-header">
+        <BoardBoxHeader />
+        <button className="burger-menu" onClick={toggleSidebar}>
+          {isSidebarOpen ? '✖' : '☰'}
+        </button>
+      </div>
       <Sidebar isOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
 
       <div className="FeedbackBoardHeaderDesktop">
@@ -29,7 +29,7 @@ export default function SidebarHome() {
         </div>
         <FilterBox />
         <RoadmapBox />
-      </div> 
+      </div>
 
       <style jsx>{`
         .burger-menu {
@@ -54,6 +54,8 @@ export default function SidebarHome() {
         }
 
         .FeedbackBoardHeaderDesktop {
+          padding-top: 56px;
+          padding-bottom: 46px;
           display: none;
           flex-direction: row;
           align-items: center;
@@ -86,6 +88,21 @@ export default function SidebarHome() {
             display: flex;
           }
         }
+
+        @media(min-width: 1110px) {
+        .FeedbackBoardHeaderTablet {
+          display: none;
+        }
+
+        .FeedbackBoardHeaderDesktop {
+          display: flex;
+          flex-direction: column;
+          position: absolute;
+          padding-top: 95px;
+          padding-left: 165px;
+          ;
+        }
+      }
       `}</style>
     </div>
   );

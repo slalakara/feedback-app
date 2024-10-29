@@ -1,8 +1,8 @@
 "use client"
 import { useState } from "react";
-import AddFeedbackBtn from "@/components/FeedbackHeader/addFeedbackBtn";
-import FeedbackHeader from "@/components/FeedbackHeader/feedbackHeader";
-import HeaderFilter from "@/components/FeedbackHeader/headerFilter";
+import AddFeedbackBtn from "./addFeedbackBtn";
+import FeedbackHeader from "./feedbackHeader";
+import HeaderFilter from "./headerFilter";
 import NewPage from "../new/page";
 import "./FeedbackHeader.css";
 

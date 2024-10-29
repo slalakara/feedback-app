@@ -1,24 +1,28 @@
-"use client"
+
+"use client";
+import Link from 'next/link';
 import CommentsBtn from "./comment-btn/comment-btn";
 import LikeBtn from "./like-btn/like-btn";
-import "@/components/FeedbackCard/feedback-card.css"
+import "./feedback-card.css";
 
-export default function FeedbackCard() {
-  return(
+export default function FeedbackCard({ feedback }) {
+  return (
     <ul className="card-items">
       <li className="card-item">
-        <div className="desktopLikeBtn"><LikeBtn /></div>
         <div className="card-item-text">
-          <h4>Add tags for solutions</h4>
-          <p>Easier to search for solutions based on a specific stack.</p>
-          <button className="statusBtn">Enhancement</button>
+          <Link href={`getfeedbackdetail/${feedback.id}`}>
+            <h4>{feedback.title}</h4>
+
+            <p>{feedback.detail}</p>
+            <button className="statusBtn">{feedback.status}</button>
+          </Link>
         </div>
+
         <div className="feedbackcard-btns">
-          <LikeBtn />
-          <CommentsBtn />
+          <LikeBtn voteCount={feedback.voteCount} feedbackId={feedback.id} />
+          <CommentsBtn commentsCount={feedback.commentsCount} />
         </div>
-        <div className="desktopCommentsBtn"><CommentsBtn /></div>
       </li>
-    </ul>
-  )
+    </ul >
+  );
 }

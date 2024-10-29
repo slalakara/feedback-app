@@ -1,6 +1,22 @@
-export default function Page({params}) {
-  const { id } = params;
+import { fetchFeedbackDetail } from '@/utils/func';
+import Comments from '@/components/comments/Comments';
+import FeedbackHeaderComp from "@/components/FeedbackHeader/FeedbackHeaderComp";
+import styles from "@/app/PostDetail/PostDetail.css";
+
+export default async function FeedbackDetailPage({ params }) {
+  const feedback = await fetchFeedbackDetail(params.id);
+
   return (
-   <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, repellendus! Quae fuga, repellat hic numquam ipsum asperiores excepturi, soluta animi deleniti quia optio! Quisquam aspernatur minima at nobis suscipit nisi.</div>
+    <div className={styles.container}>
+      <FeedbackHeaderComp />
+      <div className={styles.feedbackDetail}>
+        <h1>{feedback.title}</h1>
+        <p>{feedback.description}</p>
+        <button className="statusBtn">{feedback.status}</button>
+        
+    
+        <Comments comments={feedback.comments} />
+      </div>
+    </div>
   );
 }

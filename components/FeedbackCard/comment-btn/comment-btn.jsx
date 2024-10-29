@@ -1,11 +1,11 @@
-import Comments from "@/components/svgs/comments"
+import Comments from "@/components/svgs/comments";
 
-export default function CommentsBtn() {
-  return(
+export default function CommentsBtn({ commentsCount }) {
+  return (
     <div className="comments-btn">
-      <button className="comments-btn">
-        <Comments /> <span>2</span>
+      <button>
+        <Comments /> <span>{commentsCount}</span>
       </button>
     </div>
-  )
+  );
 }

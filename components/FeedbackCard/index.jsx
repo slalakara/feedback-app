@@ -5,30 +5,31 @@ import LikeBtn from "./like-btn/like-btn";
 import "./feedback-card.css";
 
 export default function FeedbackCard({ feedback }) {
+  const { id, title, detail, status, voteCount, commentCount } = feedback;
+
   return (
     <ul className="card-items">
       <li className="card-item">
         
-        {/* Desktop view like button */}
         <div className="desktopLikeBtn">
-          <LikeBtn voteCount={feedback.voteCount} feedbackId={feedback.id} />
+          <LikeBtn voteCount={voteCount} feedbackId={id} />
         </div>
 
         <div className="card-item-text">
-          <Link href={`getfeedbackdetail/${feedback.id}`}>
-            <h4>{feedback.title}</h4>
-            <p>{feedback.detail}</p>
-            <button className="statusBtn">{feedback.status}</button>
+          <Link href={`getfeedbackdetail/${id}`}>
+            <h4>{title}</h4>
+            <p>{detail}</p>
+            <button className="statusBtn">{status}</button>
           </Link>
         </div>
 
         <div className="feedbackcard-btns">
-          <LikeBtn voteCount={feedback.voteCount} feedbackId={feedback.id} />
-          <CommentsBtn commentsCount={feedback.commentsCount} />
+          <LikeBtn voteCount={voteCount} feedbackId={id} />
+          <CommentsBtn commentsCount={commentCount} />
         </div>
 
         <div className="desktopCommentsBtn">
-          <CommentsBtn commentsCount={feedback.commentsCount} />
+          <CommentsBtn commentsCount={commentCount} />
         </div>
       </li>
     </ul>

@@ -63,3 +63,18 @@ export async function updateFeedback(feedbackId, updateData) {
   
   return response.json();
 }
+
+function filterFeedbacks(feedbacks, filterId) {
+  switch (filterId) {
+    case "1": 
+      return [...feedbacks].sort((a, b) => b.upvotes - a.upvotes);
+    case "2": 
+      return [...feedbacks].sort((a, b) => a.upvotes - b.upvotes);
+    case "3":
+      return [...feedbacks].sort((a, b) => b.comments.length - a.comments.length);
+    case "4": 
+      return [...feedbacks].sort((a, b) => a.comments.length - b.comments.length);
+    default:
+      return feedbacks; 
+  }
+}

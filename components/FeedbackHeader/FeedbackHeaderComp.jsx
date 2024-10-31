@@ -6,7 +6,7 @@ import HeaderFilter from "./headerFilter";
 import NewPage from "../new/page";
 import "./FeedbackHeader.css";
 
-export default function FeedbackHeaderComp() {
+export default function FeedbackHeaderComp({ onFilterChange }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const openModal = () => {
@@ -21,7 +21,7 @@ export default function FeedbackHeaderComp() {
     <div className="Header">
       <div className="short">
         <FeedbackHeader />
-        <HeaderFilter />
+        <HeaderFilter onFilterChange={onFilterChange} /> 
       </div>
       <AddFeedbackBtn onClick={openModal} />
 

@@ -7,19 +7,22 @@ export default function LikeBtn({ voteCount, feedbackId }) {
   const [likes, setLikes] = useState(voteCount);
 
   const handleLike = async () => {
-    
-    const response = await fetch(`https://feedback.mkadirgulgun.com.tr/api/like/${feedbackId}`, {
-      method: "POST", 
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ userId: 123 }) 
-    });
+    try {
+      const response = await fetch(`https://feedback.mkadirgulgun.com.tr/votefeedback/${feedbackId}`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ userId: 123 }) //userid yok
+      });
 
-    if (response.ok) {
-      setLikes((prevLikes) => prevLikes + 1);
-    } else {
-      console.error("Like işlemi başarısız oldu.");
+      if (response.ok) {
+        setLikes((prevLikes) => prevLikes + 1);
+      } else {
+        console.error("Failed to post like.");
+      }
+    } catch (error) {
+      console.error("An error occurred during the like operation:", error);
     }
   };
 

@@ -16,7 +16,7 @@ export default function FeedbackCard({ feedback }) {
         </div>
 
         <div className="card-item-text">
-          <Link href={`getfeedbackdetail/${id}`}>
+          <Link href={`/getfeedbackdetail/${id}`}>
             <h4>{title}</h4>
             <p>{detail}</p>
             <button className="statusBtn">{status}</button>

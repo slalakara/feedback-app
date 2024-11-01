@@ -4,20 +4,39 @@ import Link from "next/link";
 import SidebarHome from "@/components/FeedbackBoardCards/sidebar/SidebarHome";
 import FeedbackCard from "@/components/FeedbackCard";
 import FeedbackHeaderComp from "@/components/FeedbackHeader/FeedbackHeaderComp";
+import styles from "@/app/PostDetail/PostDetail.css";
+import { fetchFeedbacks } from "@/utils/fetchFunc";
 
-// export const metadata = {
-//     title: {
-//         absolute: "Stories"
-//     }
-// }
+function filterFeedbacks(feedbacks, filterId) {
+  switch (filterId) {
+    case "1":
+      return [...feedbacks].sort((a, b) => b.upvotes - a.upvotes);
+    case "2":
+      return [...feedbacks].sort((a, b) => a.upvotes - b.upvotes);
+    case "3":
+      return [...feedbacks].sort((a, b) => b.comments.length - a.comments.length);
+    case "4":
+      return [...feedbacks].sort((a, b) => a.comments.length - b.comments.length);
+    default:
+      return feedbacks;
+  }
+}
 
-export default function Page({searchParams}) {
-    // let url = `${process.env.API_ROOT_URL}${process.env.API_ENDPOINT}${process.env.API_FEEDBACKS_ENDPOINT}`
-    // if(searchParams?.category){
-    //     url = `${url}?category=${category}`
-    // }
+export default function Page() {
+  const [feedbacks, setFeedbacks] = useState([]);
+  const [selectedFilter, setSelectedFilter] = useState("1");
 
-    // console.log(url);
+  useEffect(() => {
+    async function getFeedbacks() {
+      try {
+        const feedbackData = await fetchFeedbacks();
+        setFeedbacks(filterFeedbacks(feedbackData, selectedFilter));
+      } catch (error) {
+        console.error("Feedbacks alınamadı:", error);
+      }
+    }
+    getFeedbacks();
+  }, [selectedFilter]);
 
   return (
     <div className={styles.container}>
@@ -38,6 +57,6 @@ export default function Page({searchParams}) {
           <p>Hiç geri bildirim yok.</p>
         )}
       </main>
-    </div>
-  );
+    </div>
+  );
 }

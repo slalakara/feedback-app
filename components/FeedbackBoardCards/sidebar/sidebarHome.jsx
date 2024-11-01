@@ -68,7 +68,7 @@ export default function SidebarHome() {
           }
 
           .mobile-boardbox-header {
-            display: none;
+            display: table-column;
           }
 
           .desktop-boardbox-header {
@@ -100,6 +100,7 @@ export default function SidebarHome() {
           position: absolute;
           padding-top: 95px;
           padding-left: 165px;
+          gap: 20px;
           ;
         }
       }

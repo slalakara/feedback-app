@@ -1,4 +1,4 @@
-
+import { fetchFeedbackDetail } from '@/utils/func';
 import Comments from '@/components/comments/Comments';
 import FeedbackHeaderComp from "@/components/FeedbackHeader/FeedbackHeaderComp";
 import styles from "@/app/PostDetail/PostDetail.css";

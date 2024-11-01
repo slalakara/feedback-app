@@ -14,15 +14,32 @@ export async function fetchFeedbacks(category) {
   }
 }
 
-
 export async function fetchFeedbackDetail(feedbackId) {
   const url = `${process.env.API_ROOT_URL}${process.env.API_FEEDBACKS_DETAIL_ENDPOINT}/${feedbackId}`;
   
   const response = await fetch(url);
   if (!response.ok) throw new Error('Failed to fetch feedback detail');
   
-  return response.json();
+  return response.json(); 
 }
+
+
+
+export async function fetchCommentsByFeedback(feedbackId) {
+  const url = `https://feedback.mkadirgulgun.com.tr/getcommentsbyfeedback/${feedbackId}`;
+  
+  try {
+    const response = await fetch(url);
+    if (!response.ok) throw new Error('Failed to fetch comments');
+    
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error("Comment fetching error:", error);
+    return []; // Return an empty array in case of error
+  }
+}
+
 
 export async function fetchCategories() {
   const url = `${process.env.API_ROOT_URL}${process.env.API_ENDPOINT}${process.env.API_CATEGORIES_ENDPOINT}`;

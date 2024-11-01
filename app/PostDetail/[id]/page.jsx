@@ -9,7 +9,7 @@ import EditFeedbackBtn from '@/components/EditFeedbackBtn/editfeedbackBtn';
 import EditModal from '@/components/EditFeedbackComp/page';
 import styles from "@/app/PostDetail/PostDetail.css";
 import { useRouter } from 'next/navigation';
-import { fetchFeedbackDetail } from '@/utils/fetchFunc';
+import { fetchFeedbackDetail, fetchCommentsByFeedback } from '@/utils/fetchFunc'; // Import your fetch functions
 
 export default function FeedbackDetailPage({ params }) {
   const [feedback, setFeedback] = useState(null);
@@ -20,12 +20,11 @@ export default function FeedbackDetailPage({ params }) {
   useEffect(() => {
     async function getFeedbackDetail() {
       try {
-        const data = await fetchFeedbackDetail(params.id);
-        setFeedback(data);
-        // Fetch comments from the new endpoint
-        const commentsData = await fetch(`https://feedback.mkadirgulgun.com.tr/getcommentsbyfeedback/${params.id}`);
-        const commentsJson = await commentsData.json();
-        setComments(commentsJson || []);
+        const feedbackData = await fetchFeedbackDetail(params.id);
+        setFeedback(feedbackData);
+
+        const commentsData = await fetchCommentsByFeedback(params.id);
+        setComments(commentsData || []); 
       } catch (error) {
         console.error("Feedback detayları alınamadı:", error);
       }
@@ -56,7 +55,7 @@ export default function FeedbackDetailPage({ params }) {
 
   return (
     <div className={styles.container}>
-  
+      
       <div className="feedbackDetailContainer">
         <div className="detailcompHeader">
           <GoBack onGoBack={handleHomeBack} />

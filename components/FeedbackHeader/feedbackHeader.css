@@ -1,3 +1,14 @@
+.Header {
+  display: flex;
+  align-items: center;
+  padding-top: 0;
+
+  & .short {
+    display: flex;
+    align-items: center;
+  }
+}
+
 .addfeedback button {
   border: unset;
   background: unset;
@@ -115,8 +126,13 @@
   background-color: #373F68;
   font-family: "Jost", sans-serif;
   text-align: center;
+  align-items: center;
   margin: 0 auto;
-  padding-top: 20px;
+
+  & .short {
+    display: flex;
+    align-items: center;
+  }
 }
 
 .header-filter {
@@ -149,6 +165,7 @@
 
 
   .Header {
+    width: 689px;
     padding: 0;
     height: none;
     display: flex;
@@ -158,6 +175,13 @@
     text-align: center;
     margin: 0 auto;
     padding-top: 20px;
+    border-radius: 15px;
+
+    & .short {
+      display: flex;
+      align-items: center;
+      gap: 38px;
+    }
   }
 
   .header-filter {
@@ -177,5 +201,27 @@
     top: calc(80% + 5px);
     left: 20px;
     z-index: 1;
+  }
+}
+
+@media (min-width: 1110px) {
+  .Header {
+    width: 895px;
+    position: absolute;
+    margin-top: 100px;
+    margin-left: 450px;
+    border-radius: 15px;
+    padding: 0;
+    padding-block: 14px;
+    padding-inline: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    & .short {
+      display: flex;
+      align-items: center;
+      gap: 38px;
+    }
   }
 }

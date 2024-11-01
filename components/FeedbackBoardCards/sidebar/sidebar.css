@@ -1,10 +1,11 @@
 .sidebar-header {
   display: flex;
   justify-content: space-between;
-  background: radial-gradient(128.88% 128.88% at 103.9% -10.39%, #E84D70 0%, #A337F6 53.09%, #28A7ED 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+  background: radial-gradient(128.88% 128.88% at 103.9% -10.39%, #E84D70 0%, #A337F6 53.09%, #28A7ED 100%) ;
   z-index: 2000;
   padding: 16px 24px;
   position: relative;
+
   h4 {
     font-family: "Jost", sans-serif;
     font-size: 15px;
@@ -14,6 +15,7 @@
     text-align: left;
     color: #FFFFFF;
   }
+
   p {
     font-family: "Jost", sans-serif;
     font-size: 13px;
@@ -27,10 +29,13 @@
 .sidebar-header-text {
   display: flex;
   justify-content: space-between;
-  background: radial-gradient(128.88% 128.88% at 103.9% -10.39%, #E84D70 0%, #A337F6 53.09%, #28A7ED 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+  background: radial-gradient(128.88% 128.88% at 103.9% -10.39%, #E84D70 0%, #A337F6 53.09%, #28A7ED 100%)
+    /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
+  ;
   z-index: 2;
   padding: 16px 24px;
   position: relative;
+
   h4 {
     font-family: "Jost", sans-serif;
     font-size: 15px;
@@ -40,6 +45,7 @@
     text-align: left;
     color: #FFFFFF;
   }
+
   p {
     font-family: "Jost", sans-serif;
     font-size: 13px;
@@ -63,6 +69,10 @@
   color: #FFFFFF;
 }
 
+.sidebar.jsx-2689626022 {
+  display: block;
+}
+
 .sidebar-boxes {
   display: flex;
   flex-direction: column;
@@ -79,6 +89,10 @@
     display: none;
   }
 
+  .sidebar.jsx-2689626022 {
+    display: none;
+  }
+
   .sidebar-header-text {
     display: block;
   }
@@ -86,13 +100,14 @@
   .sidebar-header-text {
     display: flex;
     justify-content: space-between;
-    background: radial-gradient(128.88% 128.88% at 103.9% -10.39%, #E84D70 0%, #A337F6 53.09%, #28A7ED 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
-    z-index: 1;
+    background: radial-gradient(128.88% 128.88% at 103.9% -10.39%, #E84D70 0%, #A337F6 53.09%, #28A7ED 100%);
+    z-index: 2000;
     padding: 116px 24px 24px 24px;
     border-radius: 10px;
     width: 223px;
     position: relative;
     flex-direction: column;
+
     h4 {
       font-family: "Jost", sans-serif;
       font-size: 15px;
@@ -102,6 +117,7 @@
       text-align: left;
       color: #FFFFFF;
     }
+
     p {
       font-family: "Jost", sans-serif;
       font-size: 13px;
@@ -113,13 +129,8 @@
   }
 
   .FeedbackBoardHeaderDesktop {
+    width: 689px;
     margin: 0 auto;
-    padding: 28px 80px;
-  }
-
-  .FeedbackBoardHeaderDesktop {
-    display: flex;
-    justify-content: space-around;
   }
 }
 
@@ -135,17 +146,25 @@
   z-index: 1;
   padding-top: 20px;
   transition: right 0.3s ease;
-}
+  display: none;
 
-@media (min-width: 768px) {
-  .sidebar {
-    display: none;
-  }
 }
 
 @media(min-width: 1110px) {
   .FeedbackBoardHeaderTablet {
+    display: none;
+  }
+
+  .sidebar.jsx-2689626022 {
+    display: none;
+  }
+
+  .FeedbackBoardHeaderDesktop {
     display: flex;
     flex-direction: column;
+    position: absolute;
+    padding-top: 95px;
+    margin-left: 165px;
+    width: 0;
   }
 }

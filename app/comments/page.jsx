@@ -10,7 +10,7 @@ import EditFeedbackBtn from '@/components/EditFeedbackBtn/editfeedbackBtn';
 import EditModal from '@/components/EditFeedbackComp/page'; 
 import { useRouter } from 'next/navigation'; 
 
-export default function CommentArea() { 
+export default function CommentArea({ feedback }) { 
   const [isModalOpen, setModalOpen] = useState(false); 
   const router = useRouter(); 
   const [comments, setComments] = useState([]);
@@ -38,7 +38,7 @@ export default function CommentArea() {
         <GoBack onGoBack={handleHomeBack} /> 
         <EditFeedbackBtn onEditClick={handleEditClick} /> 
       </div> 
-      <FeedbackCard /> 
+      <FeedbackCard feedback={feedback} /> 
       <div className="commentContainer"> 
         <Comments comments={comments} />
         <AddComment onCommentAdded={handleCommentAdded} /> 

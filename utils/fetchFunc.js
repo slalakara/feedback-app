@@ -1,5 +1,4 @@
 "use server"
-// utils/fetchFunc.js
 export async function fetchFeedbacks(category) {
   try {
     const response = await fetch('https://feedback.mkadirgulgun.com.tr/getfeedbacks');
@@ -17,7 +16,7 @@ export async function fetchFeedbacks(category) {
 
 
 export async function fetchFeedbackDetail(feedbackId) {
-  const url = `${process.env.API_ROOT_URL}${process.env.API_ENDPOINT}${process.env.API_FEEDBACKS_DETAIL_ENDPOINT}/${feedbackId}`;
+  const url = `${process.env.API_ROOT_URL}${process.env.API_FEEDBACKS_DETAIL_ENDPOINT}/${feedbackId}`;
   
   const response = await fetch(url);
   if (!response.ok) throw new Error('Failed to fetch feedback detail');
@@ -64,7 +63,7 @@ export async function updateFeedback(feedbackId, updateData) {
   return response.json();
 }
 
-function filterFeedbacks(feedbacks, filterId) {
+export async function filterFeedbacks(feedbacks, filterId) {
   switch (filterId) {
     case "1": 
       return [...feedbacks].sort((a, b) => b.upvotes - a.upvotes);

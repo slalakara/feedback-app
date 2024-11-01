@@ -1,5 +1,6 @@
 "use client"
 import { useState, useEffect } from "react";
+import Link from "next/link";  // Link bileşenini ekledik
 import SidebarHome from "@/components/FeedbackBoardCards/sidebar/SidebarHome";
 import FeedbackCard from "@/components/FeedbackCard";
 import FeedbackHeaderComp from "@/components/FeedbackHeader/FeedbackHeaderComp";
@@ -46,7 +47,11 @@ export default function Page() {
         <FeedbackHeaderComp onFilterChange={setSelectedFilter} />
         {feedbacks.length > 0 ? (
           feedbacks.map((feedback) => (
-            <FeedbackCard key={feedback.id} feedback={feedback} />
+            <Link key={feedback.id} href={`/PostDetail/${feedback.id}`}>
+              
+                <FeedbackCard feedback={feedback} />
+              
+            </Link>
           ))
         ) : (
           <p>Hiç geri bildirim yok.</p>

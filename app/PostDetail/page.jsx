@@ -1,6 +1,6 @@
 "use client"
 import { useState, useEffect } from "react";
-import Link from "next/link";  // Link bileşenini ekledik
+import Link from "next/link";  
 import SidebarHome from "@/components/FeedbackBoardCards/sidebar/SidebarHome";
 import FeedbackCard from "@/components/FeedbackCard";
 import FeedbackHeaderComp from "@/components/FeedbackHeader/FeedbackHeaderComp";

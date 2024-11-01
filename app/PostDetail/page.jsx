@@ -4,6 +4,7 @@ import SidebarHome from "@/components/FeedbackBoardCards/sidebar/SidebarHome";
 import FeedbackCard from "@/components/FeedbackCard";
 import FeedbackHeaderComp from "@/components/FeedbackHeader/FeedbackHeaderComp";
 import styles from "@/app/PostDetail/PostDetail.css";
+import { fetchFeedbacks } from "@/utils/fetchFunc";
 
 function filterFeedbacks(feedbacks, filterId) {
   switch (filterId) {

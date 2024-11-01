@@ -4,7 +4,6 @@ import CommentsBtn from "./comment-btn/comment-btn";
 import LikeBtn from "./like-btn/like-btn";
 import "./feedback-card.css";
 
-
 export default function FeedbackCard({ feedback }) {
   const { id, title, detail, status, voteCount, commentCount } = feedback;
 
@@ -17,8 +16,7 @@ export default function FeedbackCard({ feedback }) {
         </div>
 
         <div className="card-item-text">
-       
-          <Link href={`/PostDetail/${id}`}>
+          <Link href={`getfeedbackdetail/${id}`}>
             <h4>{title}</h4>
             <p>{detail}</p>
             <button className="statusBtn">{status}</button>

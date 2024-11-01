@@ -1,5 +1,5 @@
 "use server"
-// utils/func.js
+// utils/fetchFunc.js
 export async function fetchFeedbacks(category) {
   try {
     const response = await fetch('https://feedback.mkadirgulgun.com.tr/getfeedbacks');

@@ -1,10 +1,12 @@
 import "@/components/FeedbackBoardCards/roadmap-box/roadmap.css"
+import Link from "next/link"
+
 export default function RoadmapBox() {
   return(
     <div className="RoadmapBox">
       <div className="roadmap-box-header">
         <h3>Roadmap</h3>
-        <a href="#">View</a>
+        <Link href={'/Roadmap'}>View</Link>
       </div>
       <ul className="status">
         <li><div className=""><span className="planned">•</span>   Planned</div> <span>2</span></li>

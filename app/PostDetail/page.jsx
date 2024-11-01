@@ -1,6 +1,5 @@
 "use client"
 import { useState, useEffect } from "react";
-import { fetchFeedbacks } from "@/utils/func";
 import SidebarHome from "@/components/FeedbackBoardCards/sidebar/SidebarHome";
 import FeedbackCard from "@/components/FeedbackCard";
 import FeedbackHeaderComp from "@/components/FeedbackHeader/FeedbackHeaderComp";

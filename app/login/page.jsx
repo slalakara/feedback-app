@@ -7,7 +7,7 @@ export default function LoginPage(){
     const token = cookieStore.get("accessToken")?.value;
     
     if(token){
-        redirect("/")
+        redirect("/PostDetail")
     }
     
     return <LoginForm />

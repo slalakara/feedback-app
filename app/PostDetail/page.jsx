@@ -46,11 +46,9 @@ export default function Page() {
       <main className={styles.content}>
         <FeedbackHeaderComp onFilterChange={setSelectedFilter} />
         {feedbacks.length > 0 ? (
-          feedbacks.map((feedback) => (
-            <Link key={feedback.id} href={`/PostDetail/${feedback.id}`}>
-              
-                <FeedbackCard feedback={feedback} />
-              
+          feedbacks.map((x) => (
+            <Link key={x.id} href={`/PostDetail/${x.id}`}>
+              <FeedbackCard feedback={x.feedback} />
             </Link>
           ))
         ) : (

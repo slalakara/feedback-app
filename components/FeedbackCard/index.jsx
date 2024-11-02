@@ -5,8 +5,9 @@ import LikeBtn from "./like-btn/like-btn";
 import "./feedback-card.css";
 
 export default function FeedbackCard({ feedback }) {
-  const { id, title, detail, status, voteCount, commentCount } = feedback;
-
+  const { id, title, detail, status, voteCount, commentCount } = feedback?.feedback || {};
+  console.log(feedback);
+  
   return (
     <ul className="card-items">
       <li className="card-item">

@@ -33,15 +33,18 @@ export default function Sidebar({ isOpen, toggleSidebar, categories }) {
           list-style-type: none;
           padding: 0;
         }
+
         ul li {
           margin: 15px 0;
           text-align: center;
         }
+
         ul li a {
           color: white;
           text-decoration: none;
           font-size: 18px;
         }
+
       `}</style>
     </div>
   );

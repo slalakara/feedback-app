@@ -1,6 +1,5 @@
 .container {
-  display: flex;
-  background-color: #F7F8FD;
+  margin: 0 auto;
 }
 
 .sidebar {
@@ -9,7 +8,6 @@
 }
 
 .content {
-  background-color: #F7F8FD;
   flex-grow: 1;
   z-index: 1;
   margin-top: 60px;
@@ -45,15 +43,37 @@ button {
 
 @media (max-width: 768px) {
   .container {
+    display: flex;
     flex-direction: column;
+    align-items: center;
   }
+
   .content {
+    display: flex;
+    flex-direction: column;
     margin-top: 0;
+  }
+
+  .sidebar {
+    padding: 24px;
+    background-color: unset;
+    top: 0;
+    z-index: 1;
+    padding-top: 20px;
+    margin-bottom: 70px;
+    display: flex;
+    justify-content: center;
   }
 }
 
 @media(min-width: 1110px) {
   .container {
+    max-width: 1550px;
+    display: flex;
+  }
+
+  main {
+    display: flex;
     flex-direction: column;
   }
   

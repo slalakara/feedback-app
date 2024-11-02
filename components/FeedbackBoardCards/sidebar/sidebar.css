@@ -26,15 +26,29 @@
   }
 }
 
+.sidebar {
+  padding: 24px;
+  width: 250px;
+  height: 100vh;
+  background-color: #F7F8FD;
+  color: white;
+  position: fixed;
+  top: 0;
+  right: -250px;
+  z-index: 1;
+  padding-top: 20px;
+  transition: right 0.3s ease;
+  display: none;
+}
+
+
 .sidebar-header-text {
-  display: flex;
+  display: block;
   justify-content: space-between;
-  background: radial-gradient(128.88% 128.88% at 103.9% -10.39%, #E84D70 0%, #A337F6 53.09%, #28A7ED 100%)
-    /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
-  ;
-  z-index: 2;
+  background: radial-gradient(128.88% 128.88% at 103.9% -10.39%, #E84D70 0%, #A337F6 53.09%, #28A7ED 100%);
+  z-index: 5;
   padding: 16px 24px;
-  position: relative;
+  position: fixed;
 
   h4 {
     font-family: "Jost", sans-serif;
@@ -69,7 +83,7 @@
   color: #FFFFFF;
 }
 
-.sidebar.jsx-2689626022 {
+.sidebar {
   display: block;
 }
 
@@ -89,9 +103,13 @@
     display: none;
   }
 
-  .sidebar.jsx-2689626022 {
-    display: none;
+  .FeedbackBoardHeaderTablet {
+    width: 800px;
   }
+
+  /* .sidebar.jsx-2689626022 {
+    display: none;
+  } */
 
   .sidebar-header-text {
     display: block;
@@ -132,21 +150,19 @@
     width: 689px;
     margin: 0 auto;
   }
-}
 
-.sidebar {
-  padding: 24px;
-  width: 250px;
-  height: 100vh;
-  background-color: #F7F8FD;
-  color: white;
-  position: fixed;
-  top: 0;
-  right: -250px;
-  z-index: 1;
-  padding-top: 20px;
-  transition: right 0.3s ease;
-  display: none;
+  .sidebar {
+    background-color: unset;
+    display: block;
+    color: white;
+    top: 0;
+    right: 0;
+    padding-top: 20px;
+    transition: none;
+    position: unset;
+    width: 450px;
+    max-height: min-content;
+  }
 
 }
 
@@ -155,9 +171,16 @@
     display: none;
   }
 
-
-  .sidebar.jsx-2689626022 {
-    display: none;
+  .sidebar {
+    display: block;
+    color: white;
+    margin: 0 auto;
+    top: 0;
+    right: 0;
+    padding-top: 20px;
+    transition: none;
+    position: unset;
+    max-width: 510px;
   }
 
   .FeedbackBoardHeaderDesktop {

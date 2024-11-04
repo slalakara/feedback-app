@@ -9,7 +9,7 @@ import EditFeedbackBtn from '@/components/EditFeedbackBtn/editfeedbackBtn';
 import EditModal from '@/components/EditFeedbackComp/page';
 import styles from "@/app/PostDetail/PostDetail.css";
 import { useRouter } from 'next/navigation';
-import { fetchFeedbackDetail, fetchCommentsByFeedback } from '@/utils/fetchFunc'; // Import your fetch functions
+import { fetchFeedbackDetail, fetchCommentsByFeedback } from '@/utils/fetchFunc'; 
 
 export default function FeedbackDetailPage({ params }) {
   const [feedback, setFeedback] = useState(null);

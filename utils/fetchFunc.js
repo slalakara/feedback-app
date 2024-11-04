@@ -36,7 +36,7 @@ export async function fetchCommentsByFeedback(feedbackId) {
     return data;
   } catch (error) {
     console.error("Comment fetching error:", error);
-    return []; // Return an empty array in case of error
+    return []; 
   }
 }
 

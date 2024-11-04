@@ -16,7 +16,7 @@ export default function SidebarHome() {
   return (
     <div className="Home">
       <div className="mobile-boardbox-header">
-        <BoardBoxHeader />
+        {/* <BoardBoxHeader /> */}
         <button className="burger-menu" onClick={toggleSidebar}>
           {isSidebarOpen ? '✖' : '☰'}
         </button>
@@ -24,9 +24,9 @@ export default function SidebarHome() {
       <Sidebar isOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
 
       <div className="FeedbackBoardHeaderDesktop">
-        <div className="desktop-boardbox-header">
+        {/* <div className="desktop-boardbox-header">
           <BoardBoxHeader />
-        </div>
+        </div> */}
         <FilterBox />
         <RoadmapBox />
       </div>
@@ -67,9 +67,9 @@ export default function SidebarHome() {
             display: none;
           }
 
-          .mobile-boardbox-header {
-            display: table-column;
-          }
+          // .mobile-boardbox-header {
+          //   display: table-column-group;
+          // }
 
           .desktop-boardbox-header {
             display: block;

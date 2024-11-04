@@ -1,6 +1,6 @@
 import Sidebar from "./sidebar/Sidebar";
 import SidebarHome from "./sidebar/sidebarHome";
-import categories from "@/data/categories.json";
+// import categories from "@/data/categories.json";
 import FilterBox from "./filter-box/filter-box";
 import RoadmapBox from "./roadmap-box/roadmap-box";
 import "@/components/FeedbackBoardCards/feedback-board.css"
@@ -11,7 +11,7 @@ export default function FeedbackBoard() {
     <div>
       <div className="FeedbackBoardHeaderMobile">
         <BoardBoxHeader />
-        <SidebarHome categories={categories.name} />
+        <SidebarHome />
       </div>
 
       <div className="FeedbackBoardHeaderTablet">

@@ -4,8 +4,10 @@ import Link from "next/link";
 import SidebarHome from "@/components/FeedbackBoardCards/sidebar/SidebarHome";
 import FeedbackCard from "@/components/FeedbackCard";
 import FeedbackHeaderComp from "@/components/FeedbackHeader/FeedbackHeaderComp";
-import styles from "@/app/PostDetail/PostDetail.css";
+import "@/app/PostDetail/PostDetail.css";
 import { fetchFeedbacks } from "@/utils/fetchFunc";
+import EmptyPage from "@/components/FeedbackCard/empty";
+import FeedbackBoard from "@/components/FeedbackBoardCards/FeedbackBoard";
 
 function filterFeedbacks(feedbacks, filterId) {
   switch (filterId) {
@@ -39,11 +41,11 @@ export default function Page() {
   }, [selectedFilter]);
 
   return (
-    <div className={styles.container}>
-      <div className={styles.sidebar}>
-        <SidebarHome />
+    <div className="container">
+      <div className="sidebar">
+        <FeedbackBoard />
       </div>
-      <main className={styles.content}>
+      <div className="content">
         <FeedbackHeaderComp onFilterChange={setSelectedFilter} />
         {feedbacks.length > 0 ? (
           feedbacks.map((x) => (
@@ -52,9 +54,9 @@ export default function Page() {
             </Link>
           ))
         ) : (
-          <p>Hiç geri bildirim yok.</p>
+          <EmptyPage />
         )}
-      </main>
+      </div>
     </div>
   );
 }

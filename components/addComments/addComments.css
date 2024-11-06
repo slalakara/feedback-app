@@ -1,5 +1,5 @@
 .addCommentContainer {
-
+  width: 730px;
   margin-top: 40px;
   display: flex;
   flex-direction: column;
@@ -25,7 +25,6 @@
       border: none;
       background-color: #f7f8fd;
       min-width: 279px;
-      max-width: 664px;
       color: #8c92b3;
       padding: 16px 0 42px 24px;
       border-radius: 8px;
@@ -69,7 +68,7 @@
 
 @media(width <= 768px) {
   .addCommentContainer {
-    max-width: 689px;
+    width: 540px;
   }
 }
 

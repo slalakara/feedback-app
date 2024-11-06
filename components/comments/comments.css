@@ -3,7 +3,6 @@
   border-radius: 16px;
   background-color: #FFFFFF;
   border-radius: 10px;
-  width: 825px;
   padding: 24px 32px;
 }
 
@@ -25,13 +24,14 @@
   gap: 24px;
   border-bottom: 1px solid #8c92b325;
   padding-bottom: 32px;
+
   h3 {
     font-size: 18px;
     font-weight: 700;
     line-height: 26.01px;
     letter-spacing: -0.25px;
     text-align: left;
-    
+
   }
 
 
@@ -45,14 +45,14 @@
       gap: 16px;
       padding: 25px;
       border-radius: 15px;
-    
+
 
       p {
         font-size: 15px;
         font-weight: 400;
         line-height: 21.68px;
         text-align: left;
-        
+
       }
 
       .userInformation {
@@ -78,7 +78,7 @@
             font-weight: 400;
             line-height: 20.23px;
             text-align: left;
-           
+
           }
         }
       }
@@ -86,14 +86,14 @@
   }
 }
 
-@media(width <= 768px) {
-  .commentsContainer{
+@media(width <=768px) {
+  .commentsContainer {
     width: 689px;
   }
 }
 
-@media(width <= 450px) {
-  .commentsContainer{
+@media(width <=450px) {
+  .commentsContainer {
     width: 327px;
   }
 }

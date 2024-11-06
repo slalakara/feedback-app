@@ -28,7 +28,7 @@
 
 .commentContainer {
   margin: 0 auto;
-  max-width: 730px;
+  max-width: 825px;
   background-color: #FFFFFF;
   border-radius: 10px;
   position: relative;
@@ -71,6 +71,9 @@ button {
     max-width: 1550px;
     display: flex;
   }
+  .commentContainer {
+    width: 825px;
+  }
 
   main {
     display: flex;
@@ -87,6 +90,8 @@ button {
 
   .detailcompHeader {
     margin: 0 auto;
+    width: 825px;
 
   }
+
 }

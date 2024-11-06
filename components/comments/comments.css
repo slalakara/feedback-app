@@ -3,7 +3,7 @@
   border-radius: 16px;
   background-color: #FFFFFF;
   border-radius: 10px;
-
+  width: 825px;
   padding: 24px 32px;
 }
 
@@ -83,5 +83,17 @@
         }
       }
     }
+  }
+}
+
+@media(width <= 768px) {
+  .commentsContainer{
+    width: 689px;
+  }
+}
+
+@media(width <= 450px) {
+  .commentsContainer{
+    width: 327px;
   }
 }

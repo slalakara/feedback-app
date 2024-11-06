@@ -51,3 +51,7 @@ h6 {
 button{
   cursor: pointer;
 }
+
+header a{
+  height: 0;
+}

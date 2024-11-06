@@ -2,40 +2,25 @@
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 
-export async function loginAction(prevState, formData) {
-  const email = formData.get("email");
-  const password = formData.get("password");
+export async function loginAction(formData) {
+  const email = formData.email;
+  const password = formData.password;
 
-  if (!email) {
-    return { errors: { email: "E-posta alanı boş olamaz" } };
-  }
-
-  if (!password) {
-    return { errors: { password: "Şifre alanı boş olamaz" } };
-  }
-
-  const response = await fetch("https://feedback.mkadirgulgun.com.tr/login", {
+  const response = await fetch(`${process.env.API_ROOT_URL}/login`, {
     method: "POST",
     headers: {
-      "Content-type": "application/json"
+      "Content-Type": "application/json",
     },
-    body: JSON.stringify({
-      email,
-      password
-    })
+    body: JSON.stringify({ email, password }),
   });
 
   if (!response.ok) {
-    const errorText = await response.text();
-    return { errors: { global: `API hatası: ${errorText}` } };
+    return { error: "Giriş işlemi başarısız." };
   }
 
   const data = await response.json();
-  if (!data.accessToken) {
-    return { errors: { global: "Giriş başarısız, tekrar deneyin." } };
-  }
+  cookies().set("accessToken", data.token);
 
-  cookies().set("accessToken", data.accessToken);
   redirect("/");
 }
 

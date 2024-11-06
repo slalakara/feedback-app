@@ -1,14 +1,14 @@
-import LoginForm from "@/components/LoginForm/login-form";
+"use server";
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
+import LoginForm from "@/components/LoginForm/login-form";
 
-export default function LoginPage(){
-    const cookieStore = cookies();
-    const token = cookieStore.get("accessToken")?.value;
-    
-    if(token){
-        redirect("/PostDetail")
-    }
-    
-    return <LoginForm />
+export default async function LoginPage() {
+  const token = cookies().get("accessToken")?.value;
+
+  if (token) {
+    redirect("/");
+  }
+
+  return <LoginForm />;
 }

@@ -23,7 +23,7 @@ const [state, action] = useFormState(loginAction, {
           {state?.errors?.username && (<small>{state.errors.username}</small>)} <br />
           <input type="password" name="password" placeholder="*********" /> <br />
           {state?.errors?.password && (<small>{state.errors.password}</small>)} <br />
-          <Link href={'/PostDetail'}><button>Giriş Yap</button></Link>
+          <button>Giriş Yap</button>
         </form>
       </div>
     </div>

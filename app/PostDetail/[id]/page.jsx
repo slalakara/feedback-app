@@ -9,7 +9,7 @@ import EditFeedbackBtn from '@/components/EditFeedbackBtn/editfeedbackBtn';
 import EditModal from '@/components/EditFeedbackComp/page';
 import styles from "@/app/PostDetail/PostDetail.css";
 import { useRouter } from 'next/navigation';
-import { fetchFeedbackDetail, fetchCommentsByFeedback } from '@/utils/fetchFunc'; 
+import { fetchFeedbackDetail, fetchCommentsByFeedback } from '@/utils/fetchFunc';
 
 export default function FeedbackDetailPage({ params }) {
   const [feedback, setFeedback] = useState(null);
@@ -24,7 +24,7 @@ export default function FeedbackDetailPage({ params }) {
         setFeedback(feedbackData);
 
         const commentsData = await fetchCommentsByFeedback(params.id);
-        setComments(commentsData || []); 
+        setComments(commentsData || []);
       } catch (error) {
         console.error("Feedback detayları alınamadı:", error);
       }
@@ -50,12 +50,15 @@ export default function FeedbackDetailPage({ params }) {
   };
 
   if (!feedback) {
-    return <p>Yükleniyor...</p>;
+    return (
+      <div className="loadingContainer">
+        <div className="loader"></div>
+      </div>
+    );
   }
 
   return (
     <div className={styles.container}>
-      
       <div className="feedbackDetailContainer">
         <div className="detailcompHeader">
           <GoBack onGoBack={handleHomeBack} />

@@ -65,14 +65,19 @@
 
 }
 
-
-@media(width <= 768px) {
+@media(width <=768px) {
   .addCommentContainer {
     width: 540px;
   }
+
+  form {
+    textarea {
+      width: 456px;
+    }
+  }
 }
 
-@media(width <= 450px) {
+@media(width <=450px) {
   .addCommentContainer {
     max-width: 327px;
   }

@@ -120,7 +120,7 @@ button {
     & .cancel {
       padding: 14px 24px;
       background-color: #3A4374;
-      font-family: Jost;
+  font-family: "Jost", sans-serif;
       font-size: 14px;
       font-weight: 700;
       line-height: 20.23px;
@@ -133,7 +133,7 @@ button {
     .addFeedback {
       padding: 14px 24px;
       background-color: #AD1FEA;
-      font-family: Jost;
+  font-family: "Jost", sans-serif;
       font-size: 14px;
       font-weight: 700;
       line-height: 20.23px;
@@ -151,7 +151,7 @@ button {
     width: 327px;
 
     & h1 {
-      font-family: Jost;
+  font-family: "Jost", sans-serif;
       font-size: 18px;
       font-weight: 700;
       line-height: 26.01px;

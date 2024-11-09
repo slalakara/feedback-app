@@ -1,7 +1,7 @@
 .editfeedback button {
   border: unset;
   background: unset;
-  font-family: Jost;
+  font-family: "Jost", sans-serif;
   font-weight: 700;
   font-size: 14px;
   line-height: 20px;
